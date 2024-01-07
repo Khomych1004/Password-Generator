@@ -88,6 +88,15 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var slider = document.getElementById("passwordLength");
+var output = document.getElementById("length");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
