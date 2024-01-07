@@ -46,7 +46,7 @@ header {
   padding: 30px 40px;
 }
 
-.Password-options {
+.password-options {
   display: flex;
   justify-content:space-around;
   margin-bottom: 5px;
@@ -139,7 +139,7 @@ button[disabled] {
     font-size: 1rem;
   }
 
-  .Password-options {
+  .password-options {
     flex-direction: column;
   }
 }
