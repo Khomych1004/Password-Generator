@@ -88,9 +88,11 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Get links to the element #passwordLength and #length
 var slider = document.getElementById("passwordLength");
 var output = document.getElementById("length");
-output.innerHTML = slider.value; // Display the default slider value
+// Display the default slider value
+output.innerHTML = slider.value; 
 
 // Update the current slider value (each time you drag the slider handle)
 slider.oninput = function() {
@@ -99,7 +101,24 @@ slider.oninput = function() {
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  // Get links to elements
+  var lower = document.getElementById("lowercase");
+  var upper = document.getElementById("uppercase");
+  var num = document.getElementById("numeric");
+  var special = document.getElementById("specialCharacters");
 
+  // Write data from links to object
+  var options = {
+    lenth: slider.chek,
+    charactertypes:{
+      Lowercase: lower.checked,
+      Uppercase: upper.checked,
+      Numeric: num.checked,
+      specialCharacters: special.checked
+    }
+  }
+
+    return options;
 }
 
 // Function for getting a random element from an array
