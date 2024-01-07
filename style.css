@@ -17,6 +17,10 @@ body {
   background-color: #f9fbfd;
 }
 
+h2 {
+  text-align: center;
+}
+
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -40,6 +44,12 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+.Password-options {
+  display: flex;
+  justify-content:space-around;
+  margin-bottom: 5px;
 }
 
 .card-header::after {
@@ -127,6 +137,10 @@ button[disabled] {
 
   #password {
     font-size: 1rem;
+  }
+
+  .Password-options {
+    flex-direction: column;
   }
 }
 
