@@ -152,6 +152,28 @@ function arrayAdding(par, newArr, arr) {
   return newArr;
 }
 
+// Function to generate password with user input
+function generatePassword() {
+  var password = "";
+  var arrayCharacters = [];
+
+  if (selectionCheck(getPasswordOptions())) {
+    arrayCharacters = arrayAdding(getPasswordOptions().charactertypes.lowercase, arrayCharacters, lowerCasedCharacters);
+    arrayCharacters = arrayAdding(getPasswordOptions().charactertypes.numeric, arrayCharacters, numericCharacters);
+    arrayCharacters = arrayAdding(getPasswordOptions().charactertypes.specialCharacters, arrayCharacters, specialCharacters);
+    arrayCharacters = arrayAdding(getPasswordOptions().charactertypes.uppercase, arrayCharacters, upperCasedCharacters);
+
+    for (let index = 0; index < getPasswordOptions().length; index++) {
+      password += getRandom(arrayCharacters);
+    }
+  }
+  else {
+    password = "you must select at least one character type!!!";
+  }
+
+  return password;
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
