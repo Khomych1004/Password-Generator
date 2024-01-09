@@ -15,13 +15,18 @@ link to Password-Generator application -> [here](https://khomych1004.github.io/P
 
 The first and second points can be swapped
 
-If you do not select one of the character types, then when you click the Generate Password button, a message will appear stating that not one of the character types is selected
+If you do not select one of the character types,
+then when you click the Generate Password button,
+a message will appear stating that not one of the character types is selected
 ```
 
 ## Credits
 
 To create the application, I used resources on:
 [MDN Web Docs](https://developer.mozilla.org)
+||
 [GitHub Docs](https://docs.github.com)
+||
 [W3Schools](https://www.w3schools.com/)
+||
 [Stack Overflow](https://stackoverflow.com/)
