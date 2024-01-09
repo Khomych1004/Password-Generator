@@ -144,6 +144,14 @@ function selectionCheck(arr) {
   }
 }
 
+// Function: if the character type is selected, then add to the main array and return the array
+function arrayAdding(par, newArr, arr) {
+  if (par) {
+    newArr = newArr.concat(arr);
+  }
+  return newArr;
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
