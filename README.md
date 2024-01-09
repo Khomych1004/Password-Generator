@@ -1,3 +1,6 @@
 # Password-Generator
 
-![application screenshot](https://github.com/Khomych1004/Password-Generator/blob/main/assets/images/application%20screenshot.jpg)
+![application screenshot](assets/images/application%20screenshot.jpg)
+
+## Description
+The application generates random passwords of different lengths and with different types of characters
