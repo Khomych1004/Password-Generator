@@ -92,11 +92,11 @@ var upperCasedCharacters = [
 var slider = document.getElementById("passwordLength");
 var output = document.getElementById("length");
 // Display the default slider value
-output.innerHTML = slider.value; 
+output.innerHTML = slider.value;
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-    output.innerHTML = this.value;
+slider.oninput = function () {
+  output.innerHTML = this.value;
 }
 
 // Function to prompt user for password options
@@ -109,16 +109,16 @@ function getPasswordOptions() {
 
   // Write data from links to object
   var options = {
-    lenth: slider.chek,
-    charactertypes:{
-      Lowercase: lower.checked,
-      Uppercase: upper.checked,
-      Numeric: num.checked,
+    length: slider.value,
+    charactertypes: {
+      lowercase: lower.checked,
+      uppercase: upper.checked,
+      numeric: num.checked,
       specialCharacters: special.checked
     }
   }
 
-    return options;
+  return options;
 }
 
 // Function for getting a random element from an array
@@ -129,9 +129,19 @@ function getRandom(arr) {
   return arr[randomIndex];
 }
 
-// Function to generate password with user input
-function generatePassword() {
+// Function at least one character type is selected
+function selectionCheck(arr) {
+  if (arr.charactertypes.lowercase != true &&
+    arr.charactertypes.numeric != true &&
+    arr.charactertypes.specialCharacters != true &&
+    arr.charactertypes.uppercase != true) {
 
+    return false;
+  }
+  else {
+
+    return true;
+  }
 }
 
 // Get references to the #generate element
